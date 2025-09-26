@@ -258,7 +258,12 @@ def validate_iana_code_points(config):
                     validate(hybrid, f"{kem['name_group']}_{hybrid['hybrid_group']}")
 
 # extend config with "hybrid_groups" array:
-config = load_config() # extend config with "hybrid_groups" array
+# Load the full configuration (including entries marked disabled in generate.yml)
+# so that the generator output includes all algorithms. This avoids having to
+# set `enable`/`enable_kem` on every entry in generate.yml when you want to
+# enable everything for a build. If you prefer the original behavior, call
+# load_config(include_disabled_sigs=False, include_disabled_kems=False) instead.
+config = load_config(include_disabled_sigs=True, include_disabled_kems=True) # extend config with "hybrid_groups" array
 
 # complete config with "bit_security" and "hybrid_group from
 # nid_hybrid information
@@ -285,4 +290,3 @@ populate('ALGORITHMS.md', config2, '<!---')
 populate('README.md', config2, '<!---')
 print("All files generated")
 os.environ["LIBOQS_DOCS_DIR"]=os.path.join(os.environ["LIBOQS_SRC_DIR"], "docs")
-import generate_oid_nid_table
