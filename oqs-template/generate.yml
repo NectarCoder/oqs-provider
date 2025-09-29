@@ -480,7 +480,7 @@ kem_nid_end: '0x0250'
 kem_nid_hybrid_end: '0x2FFF'
 # need to edit ssl_local.h macros IS_OQS_KEM_CURVEID and IS_OQS_KEM_HYBRID_CURVEID with the above _end values
 
-# Next free signature ID: 0xff53
+# Next free signature ID: 0xff55
 sigs:
   - family: 'PERK'
     variants:
@@ -489,6 +489,13 @@ sigs:
         oqs_meth: 'OQS_SIG_alg_perk_128_fast_3'
         oid: '1.3.9999.255.1.1'
         code_point: '0xff53'
+        enable: true
+        enable_tls: true
+      - name: 'perk128short3'
+        pretty_name: 'PERK-128-short-3'
+        oqs_meth: 'OQS_SIG_alg_perk_128_short_3'
+        oid: '1.3.9999.255.1.2'
+        code_point: '0xff54'
         enable: true
         enable_tls: true
   - family: 'CRYSTALS-Dilithium'
