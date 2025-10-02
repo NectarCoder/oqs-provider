@@ -480,7 +480,7 @@ kem_nid_end: '0x0250'
 kem_nid_hybrid_end: '0x2FFF'
 # need to edit ssl_local.h macros IS_OQS_KEM_CURVEID and IS_OQS_KEM_HYBRID_CURVEID with the above _end values
 
-# Next free signature ID: 0xff57
+# Next free signature ID: 0xff5c
 sigs:
   - family: 'PERK'
     variants:
@@ -496,6 +496,41 @@ sigs:
         oqs_meth: 'OQS_SIG_alg_perk_128_short_3'
         oid: '1.3.9999.255.1.2'
         code_point: '0xff54'
+        enable: true
+        enable_tls: true
+      - name: 'perk128short5'
+        pretty_name: 'PERK-128-short-5'
+        oqs_meth: 'OQS_SIG_alg_perk_128_short_5'
+        oid: '1.3.9999.255.1.3'
+        code_point: '0xff57'
+        enable: true
+        enable_tls: true
+      - name: 'perk192short3'
+        pretty_name: 'PERK-192-short-3'
+        oqs_meth: 'OQS_SIG_alg_perk_192_short_3'
+        oid: '1.3.9999.255.1.4'
+        code_point: '0xff58'
+        enable: true
+        enable_tls: true
+      - name: 'perk192short5'
+        pretty_name: 'PERK-192-short-5'
+        oqs_meth: 'OQS_SIG_alg_perk_192_short_5'
+        oid: '1.3.9999.255.1.5'
+        code_point: '0xff59'
+        enable: true
+        enable_tls: true
+      - name: 'perk256short3'
+        pretty_name: 'PERK-256-short-3'
+        oqs_meth: 'OQS_SIG_alg_perk_256_short_3'
+        oid: '1.3.9999.255.1.6'
+        code_point: '0xff5a'
+        enable: true
+        enable_tls: true
+      - name: 'perk256short5'
+        pretty_name: 'PERK-256-short-5'
+        oqs_meth: 'OQS_SIG_alg_perk_256_short_5'
+        oid: '1.3.9999.255.1.7'
+        code_point: '0xff5b'
         enable: true
         enable_tls: true
   - family: 'HAWK'
