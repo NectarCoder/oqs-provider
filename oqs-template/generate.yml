@@ -2064,4 +2064,21 @@ sigs:
         oid: '1.3.9999.255.3.4'
         code_point: '0xff63'
         enable: true
-        enable_tls: true # Next free signature code point ID: 0xff64
+        enable_tls: true
+  - 
+    family: 'FAEST'
+    variants:
+      - name: 'faest128s'
+        pretty_name: 'FAEST-128s'
+        oqs_meth: 'OQS_SIG_alg_faest_128s'
+        oid: '1.3.9999.255.4.1'
+        code_point: '0xff64'
+        enable: true
+        enable_tls: true
+      - name: 'faest192s'
+        pretty_name: 'FAEST-192s'
+        oqs_meth: 'OQS_SIG_alg_faest_192s'
+        oid: '1.3.9999.255.4.2'
+        code_point: '0xff65'
+        enable: true
+        enable_tls: true # Next free signature code point ID: 0xff66
