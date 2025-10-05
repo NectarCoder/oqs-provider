@@ -2089,5 +2089,12 @@ sigs:
         code_point: '0xff66'
         enable: true
         enable_tls: true
-        # Next free signature code point ID: 0xff67
-        # Next free signature OID: 1.3.9999.255.4.4
+      - name: 'faestem128s'
+        pretty_name: 'FAEST-128s-em'
+        oqs_meth: 'OQS_SIG_alg_faest_em_128s'
+        oid: '1.3.9999.255.4.4'
+        code_point: '0xff67'
+        enable: true
+        enable_tls: true
+        # Next free signature code point ID: 0xff68
+        # Next free signature OID: 1.3.9999.255.4.5
