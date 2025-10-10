@@ -2045,13 +2045,13 @@ sigs:
         code_point: '0xff60'
         enable: true
         enable_tls: true
-      #- name: 'perk5shortak'
-      #  pretty_name: 'PERK-AES-KECCAK-5-short'
-      #  oqs_meth: 'OQS_SIG_alg_perk_ak_5_short'
-      #  oid: '1.3.9999.13.3.1'
-      #  code_point: '0xff61'
-      #  enable: true
-      #  enable_tls: true
+      - name: 'perk5shortak'
+        pretty_name: 'PERK-AES-KECCAK-5-short'
+        oqs_meth: 'OQS_SIG_alg_perk_ak_5_short'
+        oid: '1.3.9999.13.3.1'
+        code_point: '0xff61'
+        enable: true
+        enable_tls: true
 
   # Below RYDE is to be redone, keeping temp OIDs and code points for now
   - 
