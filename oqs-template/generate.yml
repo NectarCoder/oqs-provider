@@ -2052,37 +2052,30 @@ sigs:
         code_point: '0xff61'
         enable: true
         enable_tls: true
-
-  # Below RYDE is to be redone, keeping temp OIDs and code points for now
   - 
     family: 'RYDE'
     variants:
-      - name: 'ryde1f'
-        pretty_name: 'RYDE-1F'
-        oqs_meth: 'OQS_SIG_alg_ryde_1f'
-        oid: '1.3.9999.255.3.1'
-        code_point: '0xfff0'
-        enable: true
-        enable_tls: true
       - name: 'ryde1s'
         pretty_name: 'RYDE-1S'
         oqs_meth: 'OQS_SIG_alg_ryde_1s'
-        oid: '1.3.9999.255.3.2'
-        code_point: '0xfff1'
+        oid: '1.3.9999.14.1.1'
+        code_point: '0xff62'
         enable: true
         enable_tls: true
       - name: 'ryde3s'
         pretty_name: 'RYDE-3S'
         oqs_meth: 'OQS_SIG_alg_ryde_3s'
-        oid: '1.3.9999.255.3.3'
-        code_point: '0xfff2'
+        oid: '1.3.9999.14.2.1'
+        code_point: '0xff63'
         enable: true
         enable_tls: true
       - name: 'ryde5s'
         pretty_name: 'RYDE-5S'
         oqs_meth: 'OQS_SIG_alg_ryde_5s'
-        oid: '1.3.9999.255.3.4'
-        code_point: '0xfff3'
+        oid: '1.3.9999.14.3.1'
+        code_point: '0xff64'
         enable: true
         enable_tls: true
         
+        # Next OID: 1.3.9999.15.x.x
+        # Next code point: 0xff65
