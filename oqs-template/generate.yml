@@ -1941,6 +1941,7 @@ sigs:
                     'pretty_name': 'ECDSA p521',
                     'oid': '1.3.9999.10.12.2',
                     'code_point': '0xff52'}]
+      # Begin manually added PQC signature algorithms (yes the below two versions of SNOVA were manually added...)
       -
         name: 'snova66153'
         pretty_name: 'SNOVA_66_15_3'
@@ -1965,53 +1966,21 @@ sigs:
                     'pretty_name': 'ECDSA p521',
                     'oid': '1.3.9999.10.14.2',
                     'code_point': '0xff56'}]
-  # Old perk family was here, hence jump in the code point from 0xff56 to 0xff5e
   - 
     family: 'HAWK'
     variants:
       - name: 'hawk512'
         pretty_name: 'HAWK-512'
         oqs_meth: 'OQS_SIG_alg_hawk_512'
-        oid: '1.3.9999.255.2.1'
-        code_point: '0xff5e'
+        oid: '1.3.9999.11.1.1'
+        code_point: '0xff57'
         enable: true
         enable_tls: true
       - name: 'hawk1024'
         pretty_name: 'HAWK-1024'
         oqs_meth: 'OQS_SIG_alg_hawk_1024'
-        oid: '1.3.9999.255.2.2'
-        code_point: '0xff5f'
-        enable: true
-        enable_tls: true
-  - 
-    family: 'RYDE'
-    variants:
-      - name: 'ryde1f'
-        pretty_name: 'RYDE-1F'
-        oqs_meth: 'OQS_SIG_alg_ryde_1f'
-        oid: '1.3.9999.255.3.1'
-        code_point: '0xff60'
-        enable: true
-        enable_tls: true
-      - name: 'ryde1s'
-        pretty_name: 'RYDE-1S'
-        oqs_meth: 'OQS_SIG_alg_ryde_1s'
-        oid: '1.3.9999.255.3.2'
-        code_point: '0xff61'
-        enable: true
-        enable_tls: true
-      - name: 'ryde3s'
-        pretty_name: 'RYDE-3S'
-        oqs_meth: 'OQS_SIG_alg_ryde_3s'
-        oid: '1.3.9999.255.3.3'
-        code_point: '0xff62'
-        enable: true
-        enable_tls: true
-      - name: 'ryde5s'
-        pretty_name: 'RYDE-5S'
-        oqs_meth: 'OQS_SIG_alg_ryde_5s'
-        oid: '1.3.9999.255.3.4'
-        code_point: '0xff63'
+        oid: '1.3.9999.11.2.1'
+        code_point: '0xff58'
         enable: true
         enable_tls: true
   - 
@@ -2020,44 +1989,78 @@ sigs:
       - name: 'faest128s'
         pretty_name: 'FAEST-128s'
         oqs_meth: 'OQS_SIG_alg_faest_128s'
-        oid: '1.3.9999.255.4.1'
-        code_point: '0xff64'
+        oid: '1.3.9999.12.1.1'
+        code_point: '0xff59'
         enable: true
         enable_tls: true
       - name: 'faest192s'
         pretty_name: 'FAEST-192s'
         oqs_meth: 'OQS_SIG_alg_faest_192s'
-        oid: '1.3.9999.255.4.2'
-        code_point: '0xff65'
+        oid: '1.3.9999.12.2.1'
+        code_point: '0xff5a'
         enable: true
         enable_tls: true
       - name: 'faest256s'
         pretty_name: 'FAEST-256s'
         oqs_meth: 'OQS_SIG_alg_faest_256s'
-        oid: '1.3.9999.255.4.3'
-        code_point: '0xff66'
+        oid: '1.3.9999.12.3.1'
+        code_point: '0xff5b'
         enable: true
         enable_tls: true
       - name: 'faestem128s'
         pretty_name: 'FAEST-128s-em'
         oqs_meth: 'OQS_SIG_alg_faest_em_128s'
-        oid: '1.3.9999.255.4.4'
-        code_point: '0xff67'
+        oid: '1.3.9999.12.4.1'
+        code_point: '0xff5c'
         enable: true
         enable_tls: true
       - name: 'faestem192s'
         pretty_name: 'FAEST-192s-em'
         oqs_meth: 'OQS_SIG_alg_faest_em_192s'
-        oid: '1.3.9999.255.4.5'
-        code_point: '0xff68'
+        oid: '1.3.9999.12.5.1'
+        code_point: '0xff5d'
         enable: true
         enable_tls: true
       - name: 'faestem256s'
         pretty_name: 'FAEST-256s-em'
         oqs_meth: 'OQS_SIG_alg_faest_em_256s'
-        oid: '1.3.9999.255.4.6'
-        code_point: '0xff69'
+        oid: '1.3.9999.12.6.1'
+        code_point: '0xff5e'
         enable: true
         enable_tls: true
-        # Next free signature code point ID: 0xff6a
-        # Next free signature OID: 1.3.9999.255.4.7
+  # Next free signature code point ID: TODO
+  # Next free signature OID: TODO
+
+  # Below RYDE is to be redone, keeping temp OIDs and code points for now
+  - 
+    family: 'RYDE'
+    variants:
+      - name: 'ryde1f'
+        pretty_name: 'RYDE-1F'
+        oqs_meth: 'OQS_SIG_alg_ryde_1f'
+        oid: '1.3.9999.255.3.1'
+        code_point: '0xfff0'
+        enable: true
+        enable_tls: true
+      - name: 'ryde1s'
+        pretty_name: 'RYDE-1S'
+        oqs_meth: 'OQS_SIG_alg_ryde_1s'
+        oid: '1.3.9999.255.3.2'
+        code_point: '0xfff1'
+        enable: true
+        enable_tls: true
+      - name: 'ryde3s'
+        pretty_name: 'RYDE-3S'
+        oqs_meth: 'OQS_SIG_alg_ryde_3s'
+        oid: '1.3.9999.255.3.3'
+        code_point: '0xfff2'
+        enable: true
+        enable_tls: true
+      - name: 'ryde5s'
+        pretty_name: 'RYDE-5S'
+        oqs_meth: 'OQS_SIG_alg_ryde_5s'
+        oid: '1.3.9999.255.3.4'
+        code_point: '0xfff3'
+        enable: true
+        enable_tls: true
+        
