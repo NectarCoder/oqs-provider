@@ -2031,21 +2031,21 @@ sigs:
   - 
     family: 'PERK'
     variants:
-      - name: 'perk1shortak'
+      - name: 'perkak1short'
         pretty_name: 'PERK-AES-KECCAK-1-short'
         oqs_meth: 'OQS_SIG_alg_perk_ak_1_short'
         oid: '1.3.9999.13.1.1'
         code_point: '0xff5f'
         enable: true
         enable_tls: true
-      - name: 'perk3shortak'
+      - name: 'perkak3short'
         pretty_name: 'PERK-AES-KECCAK-3-short'
         oqs_meth: 'OQS_SIG_alg_perk_ak_3_short'
         oid: '1.3.9999.13.2.1'
         code_point: '0xff60'
         enable: true
         enable_tls: true
-      - name: 'perk5shortak'
+      - name: 'perkak5short'
         pretty_name: 'PERK-AES-KECCAK-5-short'
         oqs_meth: 'OQS_SIG_alg_perk_ak_5_short'
         oid: '1.3.9999.13.3.1'
