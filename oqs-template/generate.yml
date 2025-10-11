@@ -2076,6 +2076,51 @@ sigs:
         code_point: '0xff64'
         enable: true
         enable_tls: true
+  -
+    family: 'MIRATH'
+    variants:
+      - name: 'mirath1ashort'
+        pretty_name: 'MIRATH-TCITH-1A-short'
+        oqs_meth: 'OQS_SIG_alg_mirath_tcith_1a_short'
+        oid: '1.3.9999.15.1.1'
+        code_point: '0xff65'
+        enable: true
+        enable_tls: true
+      - name: 'mirath1bshort'
+        pretty_name: 'MIRATH-TCITH-1B-short'
+        oqs_meth: 'OQS_SIG_alg_mirath_tcith_1b_short'
+        oid: '1.3.9999.15.2.1'
+        code_point: '0xff66'
+        enable: true
+        enable_tls: true
+      - name: 'mirath3ashort'
+        pretty_name: 'MIRATH-TCITH-3A-short'
+        oqs_meth: 'OQS_SIG_alg_mirath_tcith_3a_short'
+        oid: '1.3.9999.15.3.1'
+        code_point: '0xff67'
+        enable: true
+        enable_tls: true
+      - name: 'mirath3bshort'
+        pretty_name: 'MIRATH-TCITH-3B-short'
+        oqs_meth: 'OQS_SIG_alg_mirath_tcith_3b_short'
+        oid: '1.3.9999.15.4.1'
+        code_point: '0xff68'
+        enable: true
+        enable_tls: true
+      - name: 'mirath5ashort'
+        pretty_name: 'MIRATH-TCITH-5A-short'
+        oqs_meth: 'OQS_SIG_alg_mirath_tcith_5a_short'
+        oid: '1.3.9999.15.5.1'
+        code_point: '0xff69'
+        enable: true
+        enable_tls: true
+      - name: 'mirath5bshort'
+        pretty_name: 'MIRATH-TCITH-5B-short'
+        oqs_meth: 'OQS_SIG_alg_mirath_tcith_5b_short'
+        oid: '1.3.9999.15.6.1'
+        code_point: '0xff6a'
+        enable: true
+        enable_tls: true
         
-        # Next OID: 1.3.9999.15.x.x
-        # Next code point: 0xff65
+        # Next OID: 1.3.9999.16.x.x
+        # Next code point: 0xff6b
