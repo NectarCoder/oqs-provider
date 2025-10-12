@@ -21,7 +21,7 @@ if(MSVC)
   add_definitions(-D_CRT_SECURE_NO_WARNINGS)
   set(OQS_ADDL_SOCKET_LIBS ws2_32.lib gdi32.lib crypt32.lib)
 else()
-  add_compile_options(-Wunused-function)
+  add_compile_options(-Wunused-function -lm) # link against libm for math functions like log2
   set(OQS_ADDL_SOCKET_LIBS "")
 endif()
 
