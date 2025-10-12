@@ -21,8 +21,17 @@ if(MSVC)
   add_definitions(-D_CRT_SECURE_NO_WARNINGS)
   set(OQS_ADDL_SOCKET_LIBS ws2_32.lib gdi32.lib crypt32.lib)
 else()
-  add_compile_options(-Wunused-function -lm) # link against libm for math functions like log2
-  set(OQS_ADDL_SOCKET_LIBS "")
+  add_compile_options(-Wunused-function)
+  # On Unix-like systems, socket/extra libs are usually not needed, but
+  # we may still want to include platform libs such as the math library
+  # (libm) if needed by the provider code (e.g. functions like log2).
+  # Use find_library for portability; fall back to empty string if not found.
+  find_library(M_LIB m)
+  if (M_LIB)
+    set(OQS_ADDL_SOCKET_LIBS ${M_LIB})
+  else()
+    set(OQS_ADDL_SOCKET_LIBS "")
+  endif()
 endif()
 
 option(OQS_KEM_ENCODERS "Provide encoders (and decoders) for KEM algorithms " OFF)
@@ -63,6 +72,15 @@ endif()
 endif()
 
 # Add required include for liboqs
+# Prefer a liboqs installed into the project's .local tree (created by
+# the build scripts). If present, set liboqs_DIR so find_package will pick
+# it up instead of any system installation which may be stale or incomplete.
+if (EXISTS "${CMAKE_SOURCE_DIR}/.local/lib/cmake/liboqs")
+  set(liboqs_DIR "${CMAKE_SOURCE_DIR}/.local/lib/cmake/liboqs" CACHE PATH "Path to liboqs CMake config" FORCE)
+elseif (EXISTS "${CMAKE_SOURCE_DIR}/.local/lib64/cmake/liboqs")
+  set(liboqs_DIR "${CMAKE_SOURCE_DIR}/.local/lib64/cmake/liboqs" CACHE PATH "Path to liboqs CMake config" FORCE)
+endif()
+
 find_package(liboqs REQUIRED)
 get_target_property(LIBOQS_INCLUDE_DIR OQS::oqs INTERFACE_INCLUDE_DIRECTORIES)
 get_target_property(LIBOQS_LIBRARY_TYPE OQS::oqs TYPE)
