@@ -2285,51 +2285,50 @@ sigs:
     variants:
       - name: 'less252192'
         pretty_name: 'LESS-252-192'
-        oqs_meth: 'OQS_ENABLE_SIG_less_252_192'
+        oqs_meth: 'OQS_SIG_alg_less_252_192'
         oid: '1.3.9999.18.1.1'
         code_point: 0xff80
         enable: true
         enable_tls: true
       - name: 'less25268'
         pretty_name: 'LESS-252-68'
-        oqs_meth: 'OQS_ENABLE_SIG_less_252_68'
+        oqs_meth: 'OQS_SIG_alg_less_252_68'
         oid: '1.3.9999.18.2.1'
         code_point: 0xff81
         enable: true
         enable_tls: true
       - name: 'less25245'
         pretty_name: 'LESS-252-45'
-        oqs_meth: 'OQS_ENABLE_SIG_less_252_45'
+        oqs_meth: 'OQS_SIG_alg_less_252_45'
         oid: '1.3.9999.18.3.1'
         code_point: 0xff82
         enable: true
         enable_tls: true
       - name: 'less400220'
         pretty_name: 'LESS-400-220'
-        oqs_meth: 'OQS_ENABLE_SIG_less_400_220'
+        oqs_meth: 'OQS_SIG_alg_less_400_220'
         oid: '1.3.9999.18.4.1'
         code_point: 0xff83
         enable: true
         enable_tls: true
       - name: 'less400102'
         pretty_name: 'LESS-400-102'
-        oqs_meth: 'OQS_ENABLE_SIG_less_400_102'
+        oqs_meth: 'OQS_SIG_alg_less_400_102'
         oid: '1.3.9999.18.5.1'
         code_point: 0xff84
         enable: true
         enable_tls: true
       - name: 'less548345'
         pretty_name: 'LESS-548-345'
-        oqs_meth: 'OQS_ENABLE_SIG_less_548_345'
+        oqs_meth: 'OQS_SIG_alg_less_548_345'
         oid: '1.3.9999.18.6.1'
         code_point: 0xff85
         enable: true
         enable_tls: true
       - name: 'less548137'
         pretty_name: 'LESS-548-137'
-        oqs_meth: 'OQS_ENABLE_SIG_less_548_137'
+        oqs_meth: 'OQS_SIG_alg_less_548_137'
         oid: '1.3.9999.18.7.1'
         code_point: 0xff86
         enable: true
-        enable_tls: 
-  
+        enable_tls: true
